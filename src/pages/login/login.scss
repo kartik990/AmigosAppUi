@@ -1,0 +1,102 @@
+.login{
+
+    height: 100vh;
+    background-color: rgb(193,190,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    .card{
+        
+        height: 70vh;
+        width: 50vw;
+        // padding: 1.2rem;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        overflow: hidden;
+
+        
+        .left{
+            height: 100%;
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: start;
+            color: white;
+            background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+            url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
+              center;
+            background-size: cover;
+            
+            h1{
+                font-size: 50px;
+                font-weight: 500;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 200;
+
+            }
+            span{
+                font-weight: 200;
+                font-size: small;
+            }
+            button{
+                // width: 50%;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: white;
+                color:  rgb(96, 88, 240);
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+
+        .right{
+            height: 100%;
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            align-items: start;
+
+            h1{
+                margin-top: 60px;
+                font-size: 30px;
+                color: #555;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 10px 5px;
+                    width: 100%;
+                    outline: none;
+                }
+                button{
+                    width: 50%;
+                    padding: 8px 10px;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    color: white;
+                    background-color:  rgb(158, 153, 249);
+                }
+            }
+        }
+    }
+}

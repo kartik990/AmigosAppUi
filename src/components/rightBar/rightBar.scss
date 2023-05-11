@@ -1,0 +1,103 @@
+@import "../../style.scss";
+
+.rightBar {
+  @include themify($themes) {
+    flex: 3;
+    height: calc(100vh - 50px);
+    position: sticky;
+    top: 50px;
+    overflow: scroll;
+    font-size: 14px;
+    color: themed("textColor");
+    padding: 20px 15px 20px 5px;
+    background-color: themed("bgSoft");
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      .item {
+        padding: 20px 15px 15px 15px;
+        font-size: 14px;
+        border-radius: 8px;
+        background-color: themed("bg");
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        margin-bottom: 20px;
+        span {
+          color: gray;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 15px;
+
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            width: 100%;
+
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            span {
+              color: themed("textColor");
+              font-weight: 400;
+            }
+
+            .greenDot {
+              background-color: lightgreen;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              position: absolute;
+              top: 3px;
+              left: 25px;
+            }
+          }
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            button {
+              border-radius: 5px;
+              color: white;
+              cursor: pointer;
+              border: none;
+              padding: 7px;
+
+              &:first-child {
+                background-color: #5271ff;
+              }
+
+              &:last-child {
+                background-color: #f0544f;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
